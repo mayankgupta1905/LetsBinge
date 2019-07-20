@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--<com.google.android.material.appbar.AppBarLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content">-->
+        <!--<Toolbar-->
+                <!--android:id="@+id/toolbar"-->
+                <!--android:title="Let's Binge"-->
+                <!--android:background="@color/colorBlueDark"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="?attr/actionBarSize">-->
+        <!--</Toolbar>-->
+    <!--</com.google.android.material.appbar.AppBarLayout>-->
+    <com.google.android.material.tabs.TabLayout
+            app:tabGravity="fill"
+            app:tabMode="fixed"
+            android:id="@+id/tab_movies"
+            app:tabTextColor="@color/tabtextcolor"
+            app:tabIndicatorColor="@color/tabindicatorcolor"
+            android:background="@color/colorBlue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewpager_movies"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
