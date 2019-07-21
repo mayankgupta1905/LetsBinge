@@ -5,7 +5,7 @@
         android:layout_width="match_parent"
         android:orientation="vertical"
         android:layout_height="match_parent"
-        tools:context=".Movies_ns_Fragment">
+        tools:context=".Movies.Movies_ns_Fragment">
 
     <TextView
             android:id="@+id/text"

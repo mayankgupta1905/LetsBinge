@@ -1,4 +1,4 @@
-package com.mayank.letsbinge
+package com.mayank.letsbinge.Movies
 
 
 import android.os.Bundle
@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.mayank.letsbinge.R
 import kotlinx.android.synthetic.main.movies.*
 
 
@@ -26,6 +27,6 @@ class Movies_fragment : Fragment() {
         val adapter = MyPagerAdapter(fragmentManager)
         viewpager_movies.adapter = adapter
         tab_movies.setupWithViewPager(viewpager_movies)
-        viewpager_movies.offscreenPageLimit = 3
+        //viewpager_movies.offscreenPageLimit = 3
     }
 }

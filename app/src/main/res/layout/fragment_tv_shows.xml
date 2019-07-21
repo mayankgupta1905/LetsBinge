@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              tools:context=".Tv_shows"
+              android:orientation="vertical">
+
+    <com.google.android.material.tabs.TabLayout
+            app:tabGravity="fill"
+            app:tabMode="fixed"
+            android:id="@+id/tab_tv"
+            app:tabTextColor="@color/tabtextcolor"
+            app:tabIndicatorColor="@color/tabindicatorcolor"
+            android:background="@color/colorBlue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewpager_tv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+</>

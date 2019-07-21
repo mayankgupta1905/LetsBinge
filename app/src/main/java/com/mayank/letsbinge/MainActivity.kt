@@ -1,8 +1,6 @@
 package com.mayank.letsbinge
 
 import android.os.Bundle
-import com.google.android.material.floatingactionbutton.FloatingActionButton
-import com.google.android.material.snackbar.Snackbar
 import androidx.core.view.GravityCompat
 import androidx.appcompat.app.ActionBarDrawerToggle
 import android.view.MenuItem
@@ -12,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import android.view.Menu
 import android.widget.Toast
+import com.mayank.letsbinge.Movies.Movies_fragment
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
@@ -63,12 +62,14 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         when (item.itemId) {
             R.id.Movies -> {
                 // Handle the camera action
-                supportFragmentManager.beginTransaction().add(R.id.container,Movies_fragment()).commit()
-                true
+                supportFragmentManager.beginTransaction().replace(R.id.container,
+                    Movies_fragment()
+                ).commit()
             }
             R.id.TV_shows -> {
-                Toast.makeText(this@MainActivity,"tv shows",Toast.LENGTH_LONG).show()
-            }
+                supportFragmentManager.beginTransaction().replace(R.id.container,
+                    Tv_shows()
+                ).commit()}
             R.id.Favourites -> {
 
             }

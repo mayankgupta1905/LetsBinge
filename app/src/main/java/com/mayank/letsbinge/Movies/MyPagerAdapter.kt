@@ -1,4 +1,4 @@
-package com.mayank.letsbinge
+package com.mayank.letsbinge.Movies
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
