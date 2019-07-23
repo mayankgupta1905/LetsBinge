@@ -9,13 +9,13 @@
 
     <TextView
             android:id="@+id/text"
+            android:text="tv show pop"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
     <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvMovies_ns"
-            tools:listitem="@layout/movie_card"
+            android:id="@+id/rvTv_pop"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="wrap_content"/>
 
 </LinearLayout>

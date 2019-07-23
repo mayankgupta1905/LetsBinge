@@ -7,9 +7,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
+import com.mayank.letsbinge.Movie_card_item_list
 import com.mayank.letsbinge.R
-import kotlinx.android.synthetic.main.fragment_movies_ns_.*
+import kotlinx.android.synthetic.main.fragment_movies_pop.text
+import kotlinx.android.synthetic.main.fragment_movies_pop.view.*
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -27,23 +31,22 @@ class Movies_Pop_Fragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val view = inflater.inflate(R.layout.fragment_movies_ns_, container, false)
+        val view = inflater.inflate(R.layout.fragment_movies_pop, container, false)
 
-        val list = arrayOf("Avengers","awhabhbf","afnwjnjn")
-        val image = arrayOf(
-            R.drawable.endgame,
-            R.drawable.pexels,
-            R.drawable.endgame
-        )
-        val model_list = ArrayList<Item_model>(3)
-        for(i in model_list.indices)
-        {
-            model_list[i].movie_name = list[i]
-            model_list[i].image = image[i]
-        }
-        val adapter = ListItemAdapter(model_list)
-        rvMovies.layoutManager = LinearLayoutManager(this.context, RecyclerView.VERTICAL,false)
-        rvMovies.adapter = adapter
+        Movies_Client.service.movies_popular().enqueue(object : Callback<Movie_card_item_list> {
+            override fun onFailure(call: Call<Movie_card_item_list>, t: Throwable) {
+                text.text="Loading failed!"
+                text.text=text.text.toString()+t.cause.toString()
+            }
+
+            override fun onResponse(call: Call<Movie_card_item_list>, response: Response<Movie_card_item_list>) {
+                activity!!.runOnUiThread {
+                    val adapter = ListItemAdapter(response.body()!!.results)
+                    view.rvMovies_pop.layoutManager = LinearLayoutManager(requireContext())
+                    view.rvMovies_pop.adapter = adapter
+                }
+            }
+        })
         return view
     }
 

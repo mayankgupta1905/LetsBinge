@@ -27,6 +27,6 @@ class Movies_fragment : Fragment() {
         val adapter = MyPagerAdapter(fragmentManager)
         viewpager_movies.adapter = adapter
         tab_movies.setupWithViewPager(viewpager_movies)
-        //viewpager_movies.offscreenPageLimit = 3
+//        viewpager_movies.offscreenPageLimit = 4
     }
 }

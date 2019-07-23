@@ -9,13 +9,13 @@
 
     <TextView
             android:id="@+id/text"
+            android:text="movies_tr"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
     <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvMovies_ns"
-            tools:listitem="@layout/movie_card"
+            android:id="@+id/rvMovies_tr"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="wrap_content"/>
 
 </LinearLayout>

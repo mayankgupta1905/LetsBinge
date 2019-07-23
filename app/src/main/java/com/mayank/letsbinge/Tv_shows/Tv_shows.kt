@@ -1,4 +1,4 @@
-package com.mayank.letsbinge
+package com.mayank.letsbinge.Tv_shows
 
 
 import android.os.Bundle
@@ -6,9 +6,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.mayank.letsbinge.Movies.MyPagerAdapter
+import com.mayank.letsbinge.R
 import kotlinx.android.synthetic.main.fragment_tv_shows.*
-import kotlinx.android.synthetic.main.movies.*
 
 
 // TODO: Rename parameter arguments, choose names that match
@@ -32,7 +31,7 @@ class Tv_shows : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val adapter = MyPagerAdapter(fragmentManager)
+        val adapter = TvPagerAdapter(fragmentManager)
         viewpager_tv.adapter = adapter
         tab_tv.setupWithViewPager(viewpager_tv)
     }

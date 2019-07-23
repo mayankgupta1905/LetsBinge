@@ -9,8 +9,12 @@ import com.google.android.material.navigation.NavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import android.view.Menu
-import android.widget.Toast
 import com.mayank.letsbinge.Movies.Movies_fragment
+import com.mayank.letsbinge.Tv_shows.Tv_shows
+
+
+const val API_KEY = "2a3b2a2d0cfafa711504b4c3053bd233"
+const val link = "https://api.themoviedb.org/3/"
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 

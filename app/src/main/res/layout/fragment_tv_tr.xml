@@ -5,17 +5,17 @@
         android:layout_width="match_parent"
         android:orientation="vertical"
         android:layout_height="match_parent"
-        tools:context=".Movies.Movies_ns_Fragment">
+        tools:context=".Tv_shows.Tv_tr_Fragment">
 
     <TextView
             android:id="@+id/text"
+            android:text="tv show tr"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
     <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvMovies_ns"
-            tools:listitem="@layout/movie_card"
+            android:id="@+id/rvTv_tr"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="wrap_content"/>
 
 </LinearLayout>

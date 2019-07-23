@@ -1,17 +1,16 @@
-package com.mayank.letsbinge.Movies
+package com.mayank.letsbinge.Tv_shows
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 
-class MyPagerAdapter(fm: FragmentManager?) : FragmentPagerAdapter(fm){
+class TvPagerAdapter(fm: FragmentManager?) : FragmentPagerAdapter(fm){
     override fun getItem(position: Int): Fragment {
 
         return when(position) {
-            0 -> Movies_ns_Fragment()
-            1 -> Movies_upcoming()
-            2 -> Movies_Pop_Fragment()
-            else -> Movies_Tr_Fragment()
+            0 -> Tv_ns_Fragment()
+            1 -> Tv_pop_Fragment()
+            else -> Tv_tr_Fragment()
         }
     }
 
@@ -20,9 +19,9 @@ class MyPagerAdapter(fm: FragmentManager?) : FragmentPagerAdapter(fm){
     override fun getPageTitle(position: Int): CharSequence? {
         return when(position){
             0 -> "Now Showing"
-            1 -> "Upcoming"
-            2 -> "Popular"
+            1 -> "Popular"
             else -> "Top Rated"
         }
     }
 }
+
